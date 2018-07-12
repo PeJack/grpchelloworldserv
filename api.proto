@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package grpchelloworldserv;
+
+// Сервис обмена сообщениями.
+service Helloworld {
+  // Метод возвращает надпись Hello World с именем, передающимся через 
+  // параметр name
+  //
+  rpc HelloWorld (HelloWorldRequest) returns (HelloWorldReply);
+
+}
+
+message HelloWorldReply {
+  // Код ошибки. В случае, если ошибки нет, то значение будет равно 0.
+  int32 error_code = 1;
+
+  // Сообщения.
+  string name = 2;
+}
+
+message HelloWorldRequest {
+  string name = 1
+}
