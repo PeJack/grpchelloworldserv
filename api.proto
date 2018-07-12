@@ -7,7 +7,7 @@ service Helloworld {
   // Метод возвращает надпись Hello World с именем, передающимся через 
   // параметр name
   //
-  rpc GetHelloWorld (HelloWorldRequest) returns (HelloWorldReply);
+  rpc get_hello_world (HelloWorldRequest) returns (HelloWorldReply);
 
 }
 
